@@ -15,7 +15,7 @@ class EasyHTTP {
     return fetch(url)
       .then(this.handleError)
       .then(res => res.json())
-      .then(data => data);    
+      // .then(data => data);
   }
 
   // Make an HTTP POST Request
@@ -27,7 +27,7 @@ class EasyHTTP {
     })
       .then(this.handleError)
       .then(res => res.json())
-      .then(data => data);
+      // .then(data => data);
   }
 
   // Make an HTTP PUT Request
@@ -39,7 +39,7 @@ class EasyHTTP {
     })
     .then(this.handleError)
     .then(res => res.json())
-    .then(data => data);
+    // .then(data => data);
   }
 
   // Make an HTTP PUT Request
