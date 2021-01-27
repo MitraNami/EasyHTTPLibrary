@@ -42,7 +42,14 @@ class EasyHTTP {
     .then(data => data);
   }
 
-
+  // Make an HTTP PUT Request
+  delete(url) {
+    return fetch(url, {
+      method: 'DELETE'
+    })
+      .then(this.handleError)
+      .then(() => 'Successfully Deleted');  
+  }
 
 
   handleError(res) {
