@@ -17,7 +17,16 @@ class EasyHTTP {
       .then(data => data);    
   }
 
- 
+  post(url, data) {
+    return fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {'Content-type': 'application/json; charset=UTF-8'}
+    })
+      .then(this.handleError)
+      .then(res => res.json())
+      .then(data => data);
+  }
 
 
 
