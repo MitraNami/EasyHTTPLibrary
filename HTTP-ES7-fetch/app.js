@@ -24,6 +24,12 @@ const newUser = {
 
 
 // HTTP PUT request: Update a new user
-http.put('https://jsonplaceholder.typicode.com/users/3', newUser)
-  .then(user => console.log(user))
+// http.put('https://jsonplaceholder.typicode.com/users/3', newUser)
+//   .then(user => console.log(user))
+//   .catch(e => console.log(e));
+
+
+// HTTP DELETE request: Delete a user
+http.delete('https://jsonplaceholder.typicode.com/users/3')
+  .then(msg => console.log(msg))
   .catch(e => console.log(e));

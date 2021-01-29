@@ -48,4 +48,15 @@ class EasyHTTP {
   }
 
 
+  async delete(url) {
+    const response = await fetch(url, {
+      method: 'DELETE'
+    });
+    if (!response.ok) {
+      throw Error(`HTTP Error: status ${response.status}`);
+    }
+    return 'Successfully Deleted';
+  }
+  
+
 }
