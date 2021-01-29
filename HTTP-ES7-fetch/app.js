@@ -18,6 +18,12 @@ const newUser = {
 
 
 // HTTP POST request: Create a new user
-http.post('https://jsonplaceholder.typicode.com/users', newUser)
-  .then(newUser => console.log(newUser))
+// http.post('https://jsonplaceholder.typicode.com/users', newUser)
+//   .then(newUser => console.log(newUser))
+//   .catch(e => console.log(e));
+
+
+// HTTP PUT request: Update a new user
+http.put('https://jsonplaceholder.typicode.com/users/3', newUser)
+  .then(user => console.log(user))
   .catch(e => console.log(e));

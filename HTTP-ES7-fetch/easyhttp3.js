@@ -34,4 +34,18 @@ class EasyHTTP {
   }
 
 
+  async put(url, data) {
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) {
+      throw Error(`HTTP Error: status ${response.status}`);
+    }
+    const updatedUser = await response.json();
+    return updatedUser;
+  }
+
+
 }
